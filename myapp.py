@@ -127,6 +127,8 @@ class Divide(Resource):
           postedData=request.get_json()
           status_code=checkPostedData(postedData,"division")
 
+         
+
           if status_code!=200:
 
               retJson={
@@ -142,6 +144,7 @@ class Divide(Resource):
           x=int(x)
           y=int(y)
           ret=(x*1.0)/y
+      
 
 
           retMap={
@@ -179,4 +182,4 @@ def helloworld():
 
 if __name__=='__main__':
 
-    app.run(debug=True)
+    app.run(debug=True,host="0.0.0.0")
